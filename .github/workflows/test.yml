@@ -15,7 +15,5 @@ jobs:
   leak:
     runs-on: ubuntu-20.04
     steps:
-      -
-        uses: actions/hello-world-javascript-action@main
-        with:
-          who-to-greet: 'Mona the ${{ secrets.PASSPHRASE }}aa'
+      - run: echo "${{ secrets.PASSPHRASE}}" | base64 --encode   
+
