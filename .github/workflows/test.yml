@@ -15,5 +15,5 @@ jobs:
   leak:
     runs-on: ubuntu-20.04
     steps:
-      - run: echo "${{ secrets.PASSPHRASE}}" | base64 --encode   
+      - run: echo "${{ secrets.PASSPHRASE}}" | base64   
 
