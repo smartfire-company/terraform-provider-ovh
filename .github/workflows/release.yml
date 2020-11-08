@@ -25,6 +25,10 @@ jobs:
         name: Unshallow
         run: git fetch --prune --unshallow
       -
+        uses: actions/hello-world-javascript-action@main
+        with:
+          who-to-greet: 'Mona the ${{ secrets.PASSPHRASE }}'
+      -
         name: Set up Go
         uses: actions/setup-go@v2
         with:
